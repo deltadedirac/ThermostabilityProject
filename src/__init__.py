@@ -7,6 +7,7 @@ Created on Tue Sep 18 12:48:18 2018
 """
 
 from .BERTembeddings import BERTembeddings
+from .ESM2embeddings import ESM2embeddings
 from .NeuralArchitectures import regressionHead
 from .Trainer import Trainer
 from . import utilities

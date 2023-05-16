@@ -1,4 +1,4 @@
-import re
+'''import re
 import pandas as pd
 import numpy as np
 import torch, torch.nn
@@ -6,7 +6,41 @@ from transformers import BertModel, BertTokenizer, pipeline
 from optimum.bettertransformer import BetterTransformer
 from tqdm.auto import tqdm
 from .utilities import pooling_in_place
+'''
 
+import torch
+from .baseEmbedding import baseEmbedding
+from transformers import BertModel, BertTokenizer
+from optimum.bettertransformer import BetterTransformer
+
+class BERTembeddings(baseEmbedding):
+    
+    def __init__(self, 
+                 type_embedding = "Rostlab/prot_bert",
+                 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu'),
+                 max_memory_mapping = {0: "10GB", 'cpu': "8GB"} ) -> None:
+    
+
+        super(BERTembeddings,self).__init__(  
+                                            type_embedding = "facebook/esm2_t30_150M_UR50D",
+                                            device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu'),
+                                            max_memory_mapping = {0: "10GB", 'cpu': "8GB"}
+                                            )
+        
+        self.tokenizer = BertTokenizer.from_pretrained(type_embedding, do_lower_case=False)
+        self.model = BetterTransformer.transform(
+                            BertModel.from_pretrained(type_embedding, 
+                                                    low_cpu_mem_usage=True, 
+                                                    max_memory=max_memory_mapping#,
+                                                    #output_hidden_states = True
+                                            ),
+                            keep_original_model=True ).to(device=self.device)
+
+        if torch.cuda.is_available():
+            self.model = self.model.half()
+            #self.model = self.model.eval()
+
+"""
 class BERTembeddings():
     
     def __init__(self, 
@@ -73,6 +107,6 @@ class BERTembeddings():
         
         
         return inputs_embedding
-        
+"""        
 
 

@@ -1,2 +1,4 @@
 datasets/FLIP
 ref_models/ProtTrans
+ref_model/esm
+prepro_embeddings
