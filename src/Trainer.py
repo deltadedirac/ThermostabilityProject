@@ -54,6 +54,6 @@ class Trainer():
         mae = torch.nn.L1Loss()(outcome.flatten(), test_labels)
         print('MSE: ' + str(loss_test))
         print('RMSE: ' + str(torch.sqrt(loss_test)))
-        print('MAE: ' + str(torch.sqrt(mae)))
+        print('MAE: ' + str(mae))
         
         return loss_test, outcome

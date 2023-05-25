@@ -1,5 +1,7 @@
-dataset
 datasets/FLIP
+datasets/Structures
+datasets/profet
+datasets/dataset_Gustav_repro
 ref_models/ProtTrans
 ref_model/esm
 prepro_embeddings
