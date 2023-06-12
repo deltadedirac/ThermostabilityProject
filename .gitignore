@@ -4,4 +4,7 @@ datasets/profet
 datasets/dataset_Gustav_repro
 ref_models/ProtTrans
 ref_model/esm
+ref_models/ProteinMPNN
+ref_models/PiFold
+models
 prepro_embeddings

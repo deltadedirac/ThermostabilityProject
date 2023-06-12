@@ -1,0 +1,77 @@
+Input Notebook:  ESM2_and_ESM-IF1.ipynb
+Output Notebook: results/results_ESM2_and_ESM-IF1_Meltome.ipynb
+Executing:   0%|          | 0/11 [00:00<?, ?cell/s]Using selector: EpollSelector
+Instantiating kernel 'Python 3 (ipykernel)' with kernel provisioner: local-provisioner
+Starting kernel: ['/z/home/sgal/miniconda3/envs/thermoPML/bin/python', '-m', 'ipykernel_launcher', '-f', '/tmp/tmphkqowdry.json', '--HistoryManager.hist_file=:memory:']
+Connecting to: tcp://127.0.0.1:43851
+connecting iopub channel to tcp://127.0.0.1:59713
+Connecting to: tcp://127.0.0.1:59713
+connecting shell channel to tcp://127.0.0.1:48089
+Connecting to: tcp://127.0.0.1:48089
+connecting stdin channel to tcp://127.0.0.1:58211
+Connecting to: tcp://127.0.0.1:58211
+connecting heartbeat channel to tcp://127.0.0.1:40115
+connecting control channel to tcp://127.0.0.1:43851
+Connecting to: tcp://127.0.0.1:43851
+Using selector: EpollSelector
+Error occurred while starting new kernel client for kernel f7dbd84f-9462-42c7-87de-4134f984ce24: Kernel didn't respond in 60 seconds
+Traceback (most recent call last):
+  File "<frozen importlib._bootstrap_external>", line 1362, in _path_importer_cache
+KeyError: '/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/zmq/backend/cython'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/ipykernel_launcher.py", line 15, in <module>
+    from ipykernel import kernelapp as app
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/ipykernel/__init__.py", line 5, in <module>
+    from .connect import *  # noqa
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/ipykernel/connect.py", line 11, in <module>
+    import jupyter_client
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/jupyter_client/__init__.py", line 6, in <module>
+Kernel is taking too long to finish, terminating
+Executing:   0%|          | 0/11 [06:43<?, ?cell/s]
+Traceback (most recent call last):
+  File "/z/home/sgal/miniconda3/envs/thermoPML/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/click/core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/click/core.py", line 1055, in main
+    rv = self.invoke(ctx)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/click/core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/click/core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/click/decorators.py", line 26, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/papermill/execute.py", line 113, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/papermill/engines.py", line 367, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/papermill/engines.py", line 436, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/papermill/clientwrap.py", line 43, in execute
+    with self.setup_kernel(**kwargs):
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/nbclient/client.py", line 599, in setup_kernel
+    self.start_new_kernel_client()
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/nbclient/client.py", line 562, in async_start_new_kernel_client
+    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 182, in ensure_async
+    result = await obj
+  File "/z/home/sgal/miniconda3/envs/thermoPML/lib/python3.9/site-packages/jupyter_client/client.py", line 184, in _async_wait_for_ready
+    raise RuntimeError("Kernel didn't respond in %d seconds" % timeout)
+RuntimeError: Kernel didn't respond in 60 seconds

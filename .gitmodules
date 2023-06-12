@@ -4,3 +4,6 @@
 [submodule "FLIP"]
 	path = datasets/FLIP
 	url = https://github.com/J-SNACKKB/FLIP.git
+[submodule "PiFold"]
+	path = ref_models/PiFold
+	url = https://github.com/A4Bio/PiFold.git

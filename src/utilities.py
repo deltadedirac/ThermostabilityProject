@@ -235,3 +235,38 @@ def load_fasta_to_df(filename):
 
 '''----------------------------------------------------------------------------------------------------------'''
 '''----------------------------------------------------------------------------------------------------------'''
+import esm
+def get_guided_encoder_output(model, alphabet, coords, seq):
+    
+    device = next(model.parameters()).device
+    batch_converter = esm.inverse_folding.util.CoordBatchConverter(alphabet)
+    batch = [(coords, None, seq)]
+    coords, confidence, strs, tokens, padding_mask = batch_converter(
+        batch, device=device)
+    encoder_out = model.encoder.forward(coords, padding_mask, confidence,
+            return_all_hiddens=False)
+    # remove beginning and end (bos and eos tokens)
+    return encoder_out['encoder_out'][0][1:-1, 0]
+
+
+def ESM2_IF_repr(df, model, alphabet, folder_path, pooling=True):
+    embeddings = torch.zeros(len(df),512)
+
+    with torch.no_grad():
+        for i in tqdm(range(0,len(df))):
+            #fpath = train.iloc[i].Structure_Alphafold THIS IS A SUPERSTUPID BUG
+            fpath = df.iloc[i].Structure_Alphafold
+            structure = esm.inverse_folding.util.load_structure(fpath)
+            coords, native_seq = esm.inverse_folding.util.extract_coords_from_structure(structure)
+
+            rep = esm.inverse_folding.util.get_encoder_output(model, alphabet, coords)
+            #guide_rep = get_guided_encoder_output(model, alphabet, coords, native_seq)
+            torch.save(rep.cpu().detach(), f"{folder_path}/{str(i)+'_'+df.iloc[i].protein_id}.pt")
+            
+            if pooling==True:
+                rep = rep.mean(0).reshape(1,-1)
+                embeddings[i]=rep
+            
+            #torch.save(rep.cpu().detach(), f"{output_dir}/{path[:(len(path)-trim_length)]}.pt")
+            
+    return embeddings

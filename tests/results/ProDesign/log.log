@@ -1,0 +1,936 @@
+2023-06-06 17:59:11,932 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-06 20:41:14,010 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-06 23:52:26,909 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-06 23:54:05,564 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 10:00:52,600 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 10:41:30,298 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 11:00:17,671 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 11:05:22,095 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 11:06:54,983 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 11:14:59,171 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 12:09:39,633 - No such comm: c263b3297dd74e3c84712f745db5eff2
+2023-06-07 12:09:39,636 - No such comm: 70754ca0c0d94db5a8254d72e06d56fc
+2023-06-07 12:09:39,638 - No such comm: e899acf040264aaca196ef2eb25ac275
+2023-06-07 12:09:39,641 - No such comm: b089a92f1796491889b4ecffde05ccf1
+2023-06-07 12:09:39,642 - No such comm: 40beca36dedb4337b77a8637b1226046
+2023-06-07 12:09:39,645 - No such comm: 864f6b58587f474283ece2bb66576d4e
+2023-06-07 12:09:39,646 - No such comm: 2b8134c012504dc28a0d5551cfcf365c
+2023-06-07 12:09:39,649 - No such comm: f095deb0b7754ea3b9bd98d49898f1b9
+2023-06-07 12:09:39,651 - No such comm: 8b6a162917d8480caf798c7f9ed4a033
+2023-06-07 12:09:39,653 - No such comm: 5dde84df630544d297c38d016652a5ee
+2023-06-07 12:09:39,655 - No such comm: f5201f7a48e0451baed71590bc3e72c5
+2023-06-07 12:09:39,680 - No such comm: 5cdd8f9c209343b494874adc7b38fccc
+2023-06-07 12:09:39,683 - No such comm: 1bd25804ed4b486dab712e2f04affc92
+2023-06-07 12:09:39,684 - No such comm: d3203606187844a0960939d0f678fd2e
+2023-06-07 12:09:39,687 - No such comm: 1406d7c08ca04043a2fefcd882686572
+2023-06-07 12:09:39,688 - No such comm: 39b0c5126f8f454ca15024daf5ae032b
+2023-06-07 12:09:39,691 - No such comm: 039688fdc2ae42629f13c1e7eb82ae4a
+2023-06-07 12:09:39,692 - No such comm: abe7beae745c45838e79f75c7fe783a0
+2023-06-07 12:09:39,695 - No such comm: de458ab8a518414da6d3c52865e38455
+2023-06-07 12:09:39,696 - No such comm: 1077c46b7a2d46e68daf82a070be0647
+2023-06-07 12:09:39,699 - No such comm: 1ec25fb580254f5fa52419d97f9c897b
+2023-06-07 12:09:39,700 - No such comm: 0e2f62c4ce1d4e49b5b73f65fb4dcff0
+2023-06-07 12:09:39,724 - No such comm: 8d68c1a747154df697d77a423ea844cd
+2023-06-07 12:09:39,726 - No such comm: 3f484c484c23434e80035b9792c5bec3
+2023-06-07 12:09:39,728 - No such comm: eba711cccb1e46f5abb5ec1788c1eb0f
+2023-06-07 12:09:39,730 - No such comm: 4cee12f675ad40c9b6c1a65bf4e3a230
+2023-06-07 12:09:39,732 - No such comm: 6890a5788c154910b4a5fcb58e7bb31a
+2023-06-07 12:09:39,734 - No such comm: a827cd02be054c4ba99e06fa604260a4
+2023-06-07 12:09:39,736 - No such comm: 3d80ab9de5954fcca4ec899ba465c75a
+2023-06-07 12:09:39,738 - No such comm: 57e33062d4034f5a9f96079429470469
+2023-06-07 12:09:39,740 - No such comm: 3ce73ede64ba4d9c953335fdc09eab93
+2023-06-07 12:09:39,742 - No such comm: 387dd356dec14633965411a4cffd92ec
+2023-06-07 12:09:39,744 - No such comm: 37879aa4e5584c1ca0b365d002573829
+2023-06-07 13:29:56,888 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 13:31:32,682 - SEND Error: Host unreachable
+2023-06-07 13:33:00,289 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 13:34:04,143 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 13:35:58,355 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 13:38:22,638 - No such comm: d8b92a268d3844de9ccb10043baf9115
+2023-06-07 13:38:22,641 - No such comm: ffdf10414c7c473d9b6ae177d102edac
+2023-06-07 13:38:22,643 - No such comm: ba11eeef3b6d4c0f80499bf3cea9ff98
+2023-06-07 13:38:22,645 - No such comm: c1f5669b386b40c59d83f869e9c5a688
+2023-06-07 13:38:22,647 - No such comm: 94f0002ca9cf4b0c905deac03513efc7
+2023-06-07 13:38:22,649 - No such comm: b51c4857ee1b4bc2aec1412c0943099d
+2023-06-07 13:38:22,651 - No such comm: 4ed0000d139243d49dbd7eea6c028299
+2023-06-07 13:38:22,654 - No such comm: 7d95fe737a8d406f9d9ffbf81deba64a
+2023-06-07 13:38:22,655 - No such comm: 9e75502d8b784fd1ab4df121abf7a7c2
+2023-06-07 13:38:22,658 - No such comm: 8c6bf3a24a7f45c9ab6805aaf15b8785
+2023-06-07 13:38:22,659 - No such comm: b40739ee625e48eab2267455c0884f1a
+2023-06-07 13:38:22,742 - SEND Error: Host unreachable
+2023-06-07 13:43:15,525 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 13:46:06,759 - No such comm: 1a4dc0a15a294347b39e042318fdfd0d
+2023-06-07 13:46:06,762 - No such comm: 53ea58f122a744cba3e8e8f555393013
+2023-06-07 13:46:06,764 - No such comm: 22ddf28fd4524a21bc359640b80b919d
+2023-06-07 13:46:06,767 - No such comm: 8fe3096554be4d82ae4191b8df724e01
+2023-06-07 13:46:06,769 - No such comm: c0126e9e3dd64687b427d6beb2eb928f
+2023-06-07 13:46:06,771 - No such comm: 114cc5c1e6bb4c2f9f702e694641e722
+2023-06-07 13:46:06,773 - No such comm: 71e000c503254a8583abdc4864cc17e1
+2023-06-07 13:46:06,778 - No such comm: fd3ba7bba9454c40b030b646fd9b6fd8
+2023-06-07 13:46:06,779 - No such comm: 1a5d34e5c0134ca2904a8eeb60b13054
+2023-06-07 13:46:06,783 - No such comm: 5233515217524e75a1de3da8c8c9c84c
+2023-06-07 13:46:06,784 - No such comm: 17c3d62c9cf2424aa993a0114e9f27c2
+2023-06-07 13:55:35,714 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 13:59:29,701 - No such comm: 8445da3cf00a4250a8136d2f6511f009
+2023-06-07 13:59:29,720 - No such comm: d7d782f9791b4547a07e3b306c452b21
+2023-06-07 13:59:29,722 - No such comm: fa168910561942b2aa9481f0449c8ce0
+2023-06-07 13:59:29,724 - No such comm: 44f5485089b54b04b5b47906911e9acd
+2023-06-07 13:59:29,725 - No such comm: 2fc1f33c86e9494fae948abcf197aee3
+2023-06-07 13:59:29,727 - No such comm: beda7a6164e94c7da51012074d99ce37
+2023-06-07 13:59:29,729 - No such comm: dc9fcc0528214522a43bd04df2f1e013
+2023-06-07 13:59:29,731 - No such comm: eabe8d56687c4ccfae03ca20e4b853ef
+2023-06-07 13:59:29,733 - No such comm: d67ffa8c90364469b3069f91068e4df5
+2023-06-07 13:59:29,735 - No such comm: 855b2b5e9e704844bbe5565a6254f0a9
+2023-06-07 13:59:29,737 - No such comm: 866e083d2f7c4524b92361cf079642a6
+2023-06-07 14:03:27,242 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 14:13:35,929 - No such comm: 3d44e8d74dfb4e7a83621f8e3022f4cd
+2023-06-07 14:13:35,937 - No such comm: 767ca18d99f34d469c35b48adebcd780
+2023-06-07 14:13:35,939 - No such comm: 2941cb507d25431ea88a1bf2c67028e9
+2023-06-07 14:13:35,941 - No such comm: 692e4f0ff06a470eabb66d35d0830e68
+2023-06-07 14:13:35,943 - No such comm: 61dfa62f6a5f494a909a0e8f28f6144e
+2023-06-07 14:13:35,945 - No such comm: 1b778213919244d8b93a29b059b391cf
+2023-06-07 14:13:35,946 - No such comm: a03de1a0c2094012b62bb49aa88ab244
+2023-06-07 14:13:35,949 - No such comm: d5783ff85b0341568604025e3aa63588
+2023-06-07 14:13:35,950 - No such comm: 3c62ea2635fe43589dcb0d589ade6dac
+2023-06-07 14:13:35,953 - No such comm: a7c73a3c85d349a59e39b55c2dab975b
+2023-06-07 14:13:35,954 - No such comm: 67700e13bba44c0caf52315b4857f949
+2023-06-07 14:14:04,825 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 14:15:30,215 - No such comm: 4a06bb970e8b46119172eebe49409d03
+2023-06-07 14:15:30,219 - No such comm: 99757d281e1247eb82f17dca203fae88
+2023-06-07 14:15:30,220 - No such comm: 83f228868c1244b8ab83ba7d4f576929
+2023-06-07 14:15:30,223 - No such comm: 18e378ada74b43cb9976918f4261996c
+2023-06-07 14:15:30,225 - No such comm: 5baa25b8a52649e2b5c76180be90db67
+2023-06-07 14:15:30,228 - No such comm: 165271e40a0f44a39dd4513d24ee486e
+2023-06-07 14:15:30,229 - No such comm: 5089b22956ea4ad7a4c559c433785159
+2023-06-07 14:15:30,232 - No such comm: 0345ea4f771f4160880c6aa497918d1e
+2023-06-07 14:15:30,234 - No such comm: 3023e0a9cb04431b9239a44142e52a2f
+2023-06-07 14:15:30,236 - No such comm: 2ce019ee14ec411285983706ccd13aff
+2023-06-07 14:15:30,238 - No such comm: 43bc24193b7f41a79c3b0f3fd64bf645
+2023-06-07 14:15:30,288 - SEND Error: Host unreachable
+2023-06-07 14:17:14,556 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 14:19:01,905 - No such comm: 2a8df4ab1e58404f8bb9856326dee0c0
+2023-06-07 14:19:01,912 - No such comm: 64a72172a8e345b293e25a4a8293f356
+2023-06-07 14:19:01,914 - No such comm: 5ffc25531d8e45149c2711888c1b7d68
+2023-06-07 14:19:01,916 - No such comm: 3adffe1cda324851974a40f1eaf3ac35
+2023-06-07 14:19:01,918 - No such comm: 2b00d7655c4c40b6b6d9e1cab74087dc
+2023-06-07 14:19:01,920 - No such comm: 3b7438e5620b465898b8de32ad289dc9
+2023-06-07 14:19:01,922 - No such comm: 2524aa10d2ca4401b389080a09634058
+2023-06-07 14:19:01,925 - No such comm: 11823a8968eb4a9ba0a852792e7e33a7
+2023-06-07 14:19:01,927 - No such comm: 2d93cf2b157f45a68d5f139446b63337
+2023-06-07 14:19:01,929 - No such comm: 653c020985cc49e19e4e91e2d4682cd1
+2023-06-07 14:19:01,931 - No such comm: 95f28305849c4409aa36f42677c42ffb
+2023-06-07 14:19:28,215 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 14:42:47,971 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 15:14:28,550 - No such comm: 74a0b65d925b4a64a5ecaea662f16ac2
+2023-06-07 15:14:28,564 - No such comm: 955f847bf08e43a5b13af3861dd53d78
+2023-06-07 15:14:28,565 - No such comm: fd711aaf71f343079f8543229cce9094
+2023-06-07 15:14:28,567 - No such comm: 9a5d4fc194b2480fafce376c00cad35d
+2023-06-07 15:14:28,568 - No such comm: 53c6625be2394bd0b9e9754ef1859446
+2023-06-07 15:14:28,570 - No such comm: 1aea5af491d7431a83e3a00c9faf5e14
+2023-06-07 15:14:28,571 - No such comm: a74d24308dd54aad9bfefd1fba3ff47c
+2023-06-07 15:14:28,572 - No such comm: 82418ea860fb432998fd5e34452d0c95
+2023-06-07 15:14:28,574 - No such comm: aadabd2ac0f54ab4b865c5397abe9558
+2023-06-07 15:14:28,575 - No such comm: 5a1774fc678845178328b593a338aa87
+2023-06-07 15:14:28,577 - No such comm: 549deb22cb11480e96c34a856f157ba4
+2023-06-07 15:14:28,589 - No such comm: 87dcbbaeb69b40218eee4570a2e9725b
+2023-06-07 15:14:28,590 - No such comm: a09ababf380743dc98f2fee551a7525c
+2023-06-07 15:14:28,592 - No such comm: 9e7c23c9ffb74d7b97ce76c063aec6c9
+2023-06-07 15:14:28,593 - No such comm: f12bf0d33b574e729a3be6d9c19d3f79
+2023-06-07 15:14:28,594 - No such comm: 819f0dff60a841eea0e2acb246886c55
+2023-06-07 15:14:28,596 - No such comm: 9f100bf6dc554c35bfcb3a13b1790ceb
+2023-06-07 15:14:28,597 - No such comm: 54392234855f46459e8aa60cdabb685f
+2023-06-07 15:14:28,599 - No such comm: c4c7ad223f524c389dc48384f613ccce
+2023-06-07 15:14:28,600 - No such comm: 942cc1042e854a259f002b38836d9997
+2023-06-07 15:14:28,602 - No such comm: 49b5ae8a2a34484ab140ebe1a3e73315
+2023-06-07 15:14:28,603 - No such comm: ef112fc8a3c7410bad2dd3052ea977ef
+2023-06-07 15:14:28,615 - No such comm: c44ca69c3c8345eea148426930bab1aa
+2023-06-07 15:14:28,616 - No such comm: e2b8d69386da491ea05a36f31c57acb6
+2023-06-07 15:14:28,618 - No such comm: d097e70b0385428dac48bbac0ce1c631
+2023-06-07 15:14:28,619 - No such comm: 91dd6d93232e4dac91aae4c67367399c
+2023-06-07 15:14:28,621 - No such comm: e74c3d7f61084d80a8af50cfc29554b2
+2023-06-07 15:14:28,622 - No such comm: d08ae84f4daa4b73aa2867694a4c0f3a
+2023-06-07 15:14:28,623 - No such comm: 95c118e1a2104f7f9d6b2d31599459a6
+2023-06-07 15:14:28,625 - No such comm: 475ab453b1b84aa3bb105b657a1ab4ef
+2023-06-07 15:14:28,626 - No such comm: c79bbabd421d4d3b9da744137c2ba56b
+2023-06-07 15:14:28,628 - No such comm: 05a13369f2e3434fa4c0347d7b1a963d
+2023-06-07 15:14:28,629 - No such comm: da5970f3d00d4305a47c15127b3f27b9
+2023-06-07 15:17:42,941 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 15:20:00,106 - SEND Error: Host unreachable
+2023-06-07 15:25:18,915 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-07 15:25:33,546 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	
+2023-06-12 12:57:32,532 - 
+device: 	cuda	
+display_step: 	10	
+res_dir: 	results	
+ex_name: 	ProDesign	
+use_gpu: 	True	
+gpu: 	0	
+seed: 	111	
+data_name: 	CATH	
+data_root: 	data/	
+batch_size: 	8	
+num_workers: 	8	
+method: 	ProDesign	
+config_file: 	None	
+hidden_dim: 	128	
+node_features: 	128	
+edge_features: 	128	
+k_neighbors: 	30	
+dropout: 	0.1	
+num_encoder_layers: 	10	
+epoch: 	100	
+log_step: 	1	
+lr: 	0.001	
+patience: 	100	
+updating_edges: 	4	
+node_dist: 	1	
+node_angle: 	1	
+node_direct: 	1	
+edge_dist: 	1	
+edge_angle: 	1	
+edge_direct: 	1	
+virtual_num: 	3	

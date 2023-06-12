@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=InverseFolding_ESM2_Meltome
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
+#SBATCH --cpus-per-task=100
 #SBATCH -p urgent
 #SBATCH --gres=shard:20 -w pika
 #SBATCH --time=2-00:00:00

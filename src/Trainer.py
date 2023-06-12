@@ -2,6 +2,7 @@ import torch
 import numpy as np
 import math
 from .utilities import plot_results
+from torchmetrics import SpearmanCorrCoef
 
 class Trainer():
     def __init__(self):
@@ -52,8 +53,12 @@ class Trainer():
 
         loss_test = loss(outcome, test_labels.unsqueeze(-1))
         mae = torch.nn.L1Loss()(outcome.flatten(), test_labels)
+        
+        spearman = SpearmanCorrCoef()
+        spear_corr = spearman(outcome.flatten(), test_labels)
         print('MSE: ' + str(loss_test))
         print('RMSE: ' + str(torch.sqrt(loss_test)))
         print('MAE: ' + str(mae))
+        print('Spearman Corr: ' + str(spear_corr))
         
         return loss_test, outcome
