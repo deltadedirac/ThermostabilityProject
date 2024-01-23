@@ -142,20 +142,36 @@ class PiFold_setup(Exp):
             return NodeEmb
             
     
-    def IF_repr(self, df, folder_path):
+    def IF_repr(self, df, folder_path, **kargs):
         self.method.eval()
         embeddings = []#torch.zeros(len(df),512)
+        #import ipdb; ipdb.set_trace()
+        
+        corresp_idxdf_file = {}
+        if 'correspondence_idx_df_file' in kargs:
+            corresp_idxdf_file = kargs['correspondence_idx_df_file']
 
         with torch.no_grad():
             for i in tqdm(range(0,len(df))):
                 #fpath = train.iloc[i].Structure_Alphafold THIS IS A SUPERSTUPID BUG
-                fpath = df.iloc[i].Structure_Alphafold
-                GraphEmb = self._embedding_data(fpath)
+                #if corresp_idxdf_file: #if not kargs 
+                '''SEE IF IT IS WORKING FINE'''
+                idx = ( i, corresp_idxdf_file[df.iloc[[i]].index.item()] )[ bool(corresp_idxdf_file)]
+                #else:
+                    
+                if os.path.exists(f"{folder_path}/{str(idx)+'_'+df.iloc[i].protein_id}.pt"):
+                    tmp = torch.load(f"{folder_path}/{str(idx)+'_'+df.iloc[i].protein_id}.pt")
+                    embeddings.append( tmp.mean(0).reshape(1,-1))
+                else:
+                    fpath = df.iloc[i].Structure_Alphafold
+                    
+                    GraphEmb = self._embedding_data(fpath)
 
-                #guide_rep = get_guided_encoder_output(model, alphabet, coords, native_seq)
-                torch.save(GraphEmb.cpu().detach(), f"{folder_path}/{str(i)+'_'+df.iloc[i].protein_id}.pt")
+                    #guide_rep = get_guided_encoder_output(model, alphabet, coords, native_seq)
+                    if not kargs:
+                        torch.save(GraphEmb.cpu().detach(), f"{folder_path}/{str(i)+'_'+df.iloc[i].protein_id}.pt")
                 
-                embeddings.append( GraphEmb.mean(0).reshape(1,-1) )
+                    embeddings.append( GraphEmb.mean(0).reshape(1,-1) )
 
                 
         if not embeddings:

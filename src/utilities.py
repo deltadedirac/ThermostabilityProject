@@ -7,11 +7,71 @@ import matplotlib.pyplot as plt
 import os.path
 from os import path
 from Bio.SeqIO.FastaIO import SimpleFastaParser
+import seaborn as sns
+
+
+def cleanup_by_organism_and_correspondence_idx(df, organism, keyword=''):
+    #import ipdb; ipdb.set_trace()
+    corresp_idxdf_idxfile = dict(
+                                zip(
+                                    df.index.values.tolist(),
+                                    list(range(0,df.shape[0])
+                                    )
+                                    ) )
+    try:
+        if isinstance(organism, list):
+            query_org = '|'.join(organism)
+            df = df[ df['full_name'].str.contains(query_org)]
+        else:
+            query_org = (organism+'_'+keyword, organism)[keyword=='']
+            df = df[ df['full_name'].str.contains(query_org)]
+    except:
+        return corresp_idxdf_idxfile, None
+    
+    return corresp_idxdf_idxfile, df
+
+def read_and_plot_loss_curves(path):
+    train_loss, val_loss = parse_train_progress_files(path)
+    plot_train_val_loss_curves(train_loss, val_loss)
+
+def parse_train_progress_files(path):
+    train_loss=[]
+    val_loss=[]
+    with open(path) as f:
+        for line in f:
+            train_loss.append( float(line.split("loss: ")[1].split(' ')[0]) )
+            val_loss.append( float(line.split("loss: ")[2].split(' ')[0]) )
+    return train_loss, val_loss
+
+def plot_train_val_loss_curves(train_loss, val_loss):
+        epochs_domain = range(0, len(train_loss))
+        plt.plot(epochs_domain, train_loss, 'b', label='Train Loss')
+        plt.plot(epochs_domain, val_loss, 'r', label='Val Loss')
+        plt.title('Train ad Evaluation Losss')
+        plt.xlabel('Epochs')
+        plt.ylabel('Loss Evolution')
+        plt.legend(), plt.show()
 
 def train_test_validation_splits(df):
+    #length including CLS and SEP tokens for embeddings
+    df['length_w_tokens']=df.sequence.str.len()+2
     test,train_tot = df.loc[df['set']=='test'],df.loc[df['set']=='train']
+    #global calculation OGT as average of tm in train and validation test
+    #train_tot['OGTest_organism']=[train_tot.tm_organism.mean()]*len(train_tot)
     train, val = train_tot.loc[train_tot['validation']!=True], train_tot.loc[train_tot['validation']==True]
     return train,val, test
+
+def seek_UniprotID_association_Meltome_prots(df, df_db):
+    #import ipdb; ipdb.set_trace()
+    intersection = pd.merge(df.astype(str), df_db.astype(str), on=['sequence','target'],how='inner')
+    intersection['full_name']=intersection.protein_id
+    intersection.protein_id = intersection.protein_id.apply(lambda x: x.split('_')[0] )
+    intersection['organism']= intersection.full_name.apply(lambda x: '_'.join(x.split('_')[1::]) )
+    '''SEE THIS CARREFULLY, SEEMS LIKE I AM ADDING INFO FROM TEST SET WITHOUT INTENTION, COMPARE'''
+    intersection['tm_organism'] = intersection.organism.map( intersection.groupby('organism').apply(lambda a: a.target.astype(float).mean()) )
+    intersection.validation = intersection.validation.astype(object).apply(lambda a: True if a=='True' else a==np.nan)
+    return intersection
+
 
 ''' Method for creating batches from a list of objects, useful for making the training by batches.
     it was necessary to do so, because the BERT embeddings just give as outputs a list of elements'''
@@ -61,9 +121,10 @@ def pooled_set_of_sequences(folder_path):
   return representation
 
 
-def tensor2dataloader(tensor_data, tensor_target, batch_size=50) -> torch.utils.data.DataLoader :
+def tensor2dataloader(tensor_data, tensor_target, batch_size=50, shuffle=True) -> torch.utils.data.DataLoader :
+    #import ipdb; ipdb.set_trace()
     Dataset = torch.utils.data.TensorDataset(tensor_data, tensor_target )
-    Data_Loader = torch.utils.data.DataLoader(Dataset, batch_size=batch_size, shuffle=True)
+    Data_Loader = torch.utils.data.DataLoader(Dataset, batch_size=batch_size, shuffle=shuffle)
     return Data_Loader
 
 
@@ -73,10 +134,78 @@ def plot_results( outcome, test_labels):
 
     plt.figure(figsize=(25,8))
     plt.plot(indexes, outcome.flatten().detach().cpu().tolist(), c='red', label="predicted")
-    plt.plot( indexes, test_labels.detach().cpu().tolist(), c='green', label="ground truth")
+    plt.plot( indexes, test_labels.flatten().detach().cpu().tolist(), c='green', label="ground truth")
     plt.legend(loc="upper left")
     #plt.ylim(-1.5, 2.0)
     plt.show()
+    #import ipdb; ipdb.set_trace()
+    plot_scatter_pred(outcome.flatten().detach().cpu().numpy(), 
+                      test_labels.flatten().detach().cpu().numpy())
+    
+    
+
+def plot_scatter_pred(predicted_values, ground_truth_values, threshold = 5.):
+
+    # Set the style
+
+    sns.set(style="ticks", font_scale=1.2)
+    # Create a figure with two subplots
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 10))
+
+    # Scatter plot in linear scale
+    sns.scatterplot(x=predicted_values, y=ground_truth_values, color='steelblue', alpha=0.7, s=20, ax=ax1)
+    ax1.axline((0, 0), slope=1, color='red', linestyle='--', linewidth=1.5)
+    ax1.set_xlabel('Predicted Values', fontsize=14, fontweight='bold')
+    ax1.set_ylabel('Ground Truth Values', fontsize=14, fontweight='bold')
+    ax1.set_title('Predicted vs Ground Truth (Linear Scale)', fontsize=16, fontweight='bold')
+    ax1.tick_params(axis='both', which='both', length=0)
+    ax1.grid(True, linestyle='--', alpha=0.3)
+    sns.despine(ax=ax1)
+    max_value = max(np.max(predicted_values), np.max(ground_truth_values))
+    ax1.set_xlim(0, max_value)
+    ax1.set_ylim(0, max_value)
+    ax1.legend(['Baseline'], loc='upper left', frameon=False, fontsize=12)
+    ax1.set_aspect('equal', adjustable='box')
+
+    # Scatter plot in log scale
+    sns.scatterplot(x=predicted_values, y=ground_truth_values, color='steelblue', alpha=0.7, s=20, ax=ax2)
+    ax2.axline((0, 0), slope=1, color='red', linestyle='--', linewidth=1.5)
+    ax2.set_xlabel('Predicted Values (Log Scale)', fontsize=14, fontweight='bold')
+    ax2.set_ylabel('Ground Truth Values (Log Scale)', fontsize=14, fontweight='bold')
+    ax2.set_title('Predicted vs Ground Truth (Log Scale)', fontsize=16, fontweight='bold')
+    ax2.set_xscale('log')
+    ax2.set_yscale('log')
+    ax2.grid(True, linestyle='--', alpha=0.3)
+    sns.despine(ax=ax2)
+    ax2.set_xlim(0.1, 10 * max_value)
+    ax2.set_ylim(0.1, 10 * max_value)
+    ax2.legend(['Baseline'], loc='upper left', frameon=False, fontsize=12)
+    ax2.set_aspect('equal', adjustable='box')
+
+    # Adjust spacing between subplots
+    plt.tight_layout()
+
+    # Define threshold for almost equal values
+    #threshold = 10.
+
+    # Color points where predicted values are almost equal to ground truth values
+    diff = np.abs(predicted_values - ground_truth_values)
+    colors = np.where(diff <= threshold, diff, np.nan)
+    cmap = sns.color_palette("viridis", as_cmap=True)
+    sc = ax1.scatter(predicted_values, ground_truth_values, c=colors, cmap=cmap, alpha=0.7, s=20)
+    ax2.scatter(predicted_values, ground_truth_values, c=colors, cmap=cmap, alpha=0.7, s=20)
+
+    # Add a colorbar for the range of colors
+    cbar_ax = fig.add_axes([0.25, 0.05, 0.5, 0.03])
+    cbar = fig.colorbar(sc, cax=cbar_ax, orientation='horizontal')
+    cbar.set_label('Difference', fontsize=12)
+
+    # Adjust spacing between subplots
+    plt.tight_layout(rect=[0, 0, 1, 0.9])
+
+    # Display the plot
+    plt.show()
+
     
 def create_folder_embeddings_savings(tmpfiles):
     train_tmp_folder = tmpfiles+'train_embeddinds/'
@@ -115,25 +244,7 @@ def load_full_meltome_FLIP_db(complete_meltome_db):
     return full_meltome_db
 
 
-def seek_UniprotID_association_Meltome_prots(df, df_db):
-    """
-    list_ids = []
-    for i in range(0,len(df)):
-        print(i)
-        if i==785:
-            print('from here')
-        query_seq = df.sequence.iloc[i]
-        temp = df.target.astype(str).iloc[i]
-        protein_id_seek = df_db.query('sequence==@query_seq & target==@temp').protein_id.item()#.tolist()
-        #protein_id_seek = full_meltome_db.query('sequence==@data.sequence').protein_id.item()
-        list_ids.append( protein_id_seek  )
 
-    df['UniprotID']= list_ids
-    return df
-    """
-    intersection = pd.merge(df.astype(str), df_db.astype(str), on=['sequence','target'],how='inner')
-    intersection.protein_id = intersection.protein_id.apply(lambda x: x.split('_')[0] )
-    return intersection
 
 
 def get_url(url, **kwargs):
